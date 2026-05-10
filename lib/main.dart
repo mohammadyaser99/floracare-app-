@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
+import 'utils/constants.dart';
 
 void main() {
   runApp(const FloraCareApp());
@@ -12,13 +13,14 @@ class FloraCareApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'FloraCare',
-      debugShowCheckedModeBanner: false, // إخفاء شريط Debug
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // استخدام اللون الأخضر بشكل أساسي
-        primarySwatch: Colors.green,
-        scaffoldBackgroundColor: Colors.grey[50],
+        brightness: Brightness.light,
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: kBackgroundColor,
+        fontFamily: 'Tajawal',
       ),
-      home: const HomeScreen(), // توجيه التطبيق للشاشة الرئيسية
+      home: const HomeScreen(),
     );
   }
 }
